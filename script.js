@@ -40,12 +40,15 @@ document.getElementById('totalCalculate').addEventListener('click', function() {
             document.getElementById('balance').innerText = 'First earn';
             document.getElementById('balance').style.color = 'red';
             document.getElementById('expenses').innerText = 'More then your Balance';
+            document.getElementById('expenses').style.color = 'red';
 
 
         }
     } else {
         document.getElementById('expenses').innerText = 'Give positive integer Number';
+        document.getElementById('expenses').style.color = 'red';
         document.getElementById('balance').innerText = 'Give positive integer Number';
+        document.getElementById('balance').style.color = 'red';
 
 
     }
@@ -87,13 +90,16 @@ document.getElementById('totalCalculate').addEventListener('click', function() {
                 Remaning.innerText = rem;
             } else {
                 document.getElementById('saving').innerText = 'Balance not enough to save money';
+                document.getElementById('saving').style.color = 'red';
                 document.getElementById('remaning').innerText = 'You need to earn more money';
+                document.getElementById('remaning').style.color = 'red';
             }
 
         } else {
             document.getElementById('saving').innerText = 'Give integer Valu ';
-            document.getElementById('saving').innerText.style.color = "red";
+            document.getElementById('saving').style.color = "red";
             document.getElementById('remaning').innerText = 'Learn how to positive input Integer valu';
+            document.getElementById('remaning').style.color = 'red';
 
         }
 
