@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Master </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="text-5xl text-center mt-16 mb-4 font-bold text-rose-900">Money Master</h1>
+    <main class="w-3/4 mx-auto ">
+        <!-- image section-------- -->
+        <section class="container grid grid-cols-2 gap-4 mt-12 h-screen	">
+            <div class="">
+                <img class="w-full h-full" src="image/money-img.jpg" alt="">
+            </div>
+
+
+            <!-- calculation section----------  -->
+            <div class="bg-slate-100 text-center">
+                <!-- -------- total income----------- -->
+                <h3 class="mt-6 text-2xl mb-4 font-semibold">Income</h3>
+                <div>
+                    <h3 class="inline mx-2">Income: </h3>
+                    <input id="income" class="p-2 rounded bg-slate-300" type="text">
+                </div>
+                <!-- --------- expenses input here-------- -->
+                <h3 class="mt-6 text-2xl mb-4 font-semibold">Expenses</h3>
+                <div class="sm:text-center">
+                    <div class="mb-2">
+                        <h3 class="inline mx-2">Food: </h3>
+                        <input id="food" class=" bg-slate-300 p-2 rounded" type=" text ">
+                    </div>
+                    <div class="mb-2 ">
+                        <h3 class="inline mx-2 ">Rent: </h3>
+                        <input id="rent" class="p-2 rounded bg-slate-300" type="text">
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="inline mx-2">Clothes: </h3>
+                        <input id="clothes" class="p-2 rounded bg-slate-300" type=" text ">
+                    </div>
+                    <button id="totalCalculate" class="border mb-2 px-2 p-2 border-gray-400 bg-sky-500 rounded ">Calculate</button>
+                </div>
+
+                <!-- -----calculate button here-------  -->
+
+
+                <!-- ----------- total expens and balance ------  -->
+                <h3 class="text-2xl mb-4 font-semibold ">Total Expenses: <span id="expenses"></span></h3>
+
+                <h3 class="text-2xl mb-4 font-semibold ">Balance: <span id="balance"> </span></h3>
+                <!-- ------- save present here--------  -->
+                <div class="mb-4 ">
+                    <h3 class="inline text-2xl mb-4 mx-2 ">save: </h3>
+                    <input id="persent" class="p-2 rounded bg-slate-300" type="text">
+                    <h3 class="inline "> %</h3>
+                    <button id="save" class="border p-2 w-1/4 block mb-2  border-gray-400 rounded inline font-medium bg-sky-500 ">Save</button>
+                </div>
+                <!-- -----saving amount and remaining balance here----  -->
+                <h3 class="text-2xl mb-4 font-semibold">Saving Amount: <span id="saving"></span></h3>
+
+                <h3 class="text-2xl mb-4 font-semibold mb-4">Remaning Balance: <span id="remaning"></span> </h3>
+
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- --------------script --------------- -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
