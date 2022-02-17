@@ -38,38 +38,63 @@ document.getElementById('totalCalculate').addEventListener('click', function() {
         } else {
 
             document.getElementById('balance').innerText = 'First earn';
+            document.getElementById('balance').style.color = 'red';
             document.getElementById('expenses').innerText = 'More then your Balance';
+
+
         }
     } else {
-        document.getElementById('expenses').innerText = 'Give integer Number';
-        document.getElementById('balance').innerText = 'Give integer Number';
+        document.getElementById('expenses').innerText = 'Give positive integer Number';
+        document.getElementById('balance').innerText = 'Give positive integer Number';
+
 
     }
 
-
+    // ------------persent and saving , remeningBalance--------
     document.getElementById('save').addEventListener('click', function() {
 
         const Persent = document.getElementById('persent');
         const persentText = Persent.value;
         const persentNbr = parseFloat(persentText);
+        // ------------- persent calculation ---------------
         if (persentNbr > 0) {
-            const balancePersent = document.getElementById('balance');
-            const balanceText = balancePersent.innerText;
+            const balancePersent = document.getElementById('income');
+            const balanceText = balancePersent.value;
             const balanceNbr = parseFloat(balanceText);
 
             const totalSavingAmount = balanceNbr * persentNbr / 100;
+            // if (totalSavingAmount > totalExpenses) {
 
             document.getElementById('saving').innerText = totalSavingAmount;
+            // } else {
+            //     document.getElementById('saving').innerText = 'You need to earn more money';
+            // }
 
 
+
+            // --------remening Balance calculation -------------- 
 
             const Remaning = document.getElementById('remaning')
 
-            const rem = balanceNbr - totalSavingAmount;
-            Remaning.innerText = rem;
+
+
+            const balance = document.getElementById('balance');
+            const balanceTextFild = balance.innerText;
+            const balanceNumber = parseFloat(balanceTextFild);
+            if (balanceNumber > totalSavingAmount) {
+                const rem = balanceNumber - totalSavingAmount;
+
+                Remaning.innerText = rem;
+            } else {
+                document.getElementById('saving').innerText = 'Balance not enough to save money';
+                document.getElementById('remaning').innerText = 'You need to earn more money';
+            }
+
         } else {
-            document.getElementById('saving').innerText = 'totalSavingAmount';
-            document.getElementById('remaning').innerText = 'rem';
+            document.getElementById('saving').innerText = 'Give integer Valu ';
+            document.getElementById('saving').innerText.style.color = "red";
+            document.getElementById('remaning').innerText = 'Learn how to positive input Integer valu';
+
         }
 
 
